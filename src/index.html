@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="icon"
+      href="./images/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./images/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./images/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./styles/root.css" />
+    <title>BPM Tracker</title>
+  </head>
+  <body class="bg-slate-600 p-4">
+    <main class="grid gap-y-5">
+      <div class="grid gap-y-10 justify-center text-white">
+        <h1 class="text-5xl font-bold text-center pt-10">🎀 BPM Tracker 🎀</h1>
+        <div class="flex align-middle flex-col gap-y-6">
+          <button
+            type="button"
+            id="button"
+            class="bg-slate-800 text-lg px-10 rounded-md py-4 font-semibold transition-transform duration-75 hover:scale-105 will-change-transform active:scale-100 border border-cyan-500"
+          >
+            Click me or tap space key
+          </button>
+          <div class="flex justify-center">
+            <p id="metronome" class="border rounded-full py-4 px-6 border-cyan-500 text-4xl font-bold">
+              0
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold">Stack trace:</h3>
+        <div
+          id="logger"
+          class="border border-white w-80 p-4 h-80 overflow-auto text-white grid gap-y-4 rounded-md"
+        ></div>
+      </div>
+    </main>
+    <script type="module" src="./model.ts"></script>
+  </body>
+</html>
